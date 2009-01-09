@@ -1,0 +1,11 @@
+--- origsrc/gforth-0.7.0/libcc.fs	2008-11-01 13:03:18.000000000 -0500
++++ src/gforth-0.7.0/libcc.fs	2009-01-09 00:49:43.642125000 -0600
+@@ -564,7 +564,7 @@ DEFER compile-wrapper-function ( -- )
+ 	\    2dup type cr
+ 	2dup system drop free throw $? abort" libtool compile failed"
+ 	[ libtool-command s"  --silent --mode=link " s+
+-	  libtool-cc append libtool-flags append s"  -module -rpath " s+ ] sliteral
++	  libtool-cc append libtool-flags append s"  -module -avoid-version -rpath " s+ ] sliteral
+ 	lib-filename 2@ dirname replace-rpath s+ s"  " append
+ 	lib-filename 2@ append s" .lo -o " append
+ 	lib-filename 2@ append s" .la" append ( c-addr u )
