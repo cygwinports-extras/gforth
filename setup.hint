@@ -1,5 +1,5 @@
 category: Interpreters
-requires: libffi5 libltdl7 libtool
+requires: libffi4 libgcc1 libltdl7 libtool
 sdesc: "GNU Forth language interpreter"
 ldesc: "Gforth is a fast and portable implementation of the ANS Forth
 language. It works nicely with the Emacs editor, offers some nice
